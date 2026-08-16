@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CivilizeBD | Payment</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:Arial,"Noto Sans Bengali",sans-serif;background:#f4f7fb;color:#172033}
+.wrap{max-width:520px;margin:auto;padding:24px 16px 40px}
+.card{background:#fff;border-radius:20px;padding:22px;box-shadow:0 8px 30px rgba(20,40,70,.08);margin-bottom:16px}
+.logo{font-size:28px;font-weight:800;text-align:center}.sub{text-align:center;color:#667085;margin:6px 0 22px}
+h2{font-size:18px;margin:0 0 14px}.item{border:1px solid #e5e7eb;border-radius:14px;padding:15px;margin:10px 0}
+.label{font-weight:700;margin-bottom:7px}.muted{color:#667085;font-size:14px;line-height:1.55}
+.row{display:flex;justify-content:space-between;gap:10px;align-items:center;margin:7px 0}
+.value{font-weight:700;word-break:break-all}.btn{border:0;border-radius:9px;padding:9px 12px;background:#172033;color:white;cursor:pointer}
+.note{font-size:13px;color:#667085;text-align:center;line-height:1.5}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="card">
+    <div class="logo">CIVILIZEBD</div>
+    <div class="sub">Payment Options</div>
+
+    <div class="item">
+      <h2>🏦 Bank Transfer</h2>
+      <div class="row"><span>Bank</span><span class="value">NRB Bank PLC</span></div>
+      <div class="row"><span>Branch</span><span class="value">Uttara Branch</span></div>
+      <div class="row"><span>Account Name</span><span class="value">Arman Chowdhury</span></div>
+      <div class="row"><span>Account Number</span><button class="btn" onclick="copyText('1061050088011')">Copy</button></div>
+      <div class="row"><span>Routing Number</span><span class="value">290264630</span></div>
+    </div>
+
+    <div class="item">
+      <h2>🟣 bKash</h2>
+      <div class="muted">Personal account — Send Money</div>
+      <div class="row"><span class="value">01521499997</span><button class="btn" onclick="copyText('01521499997')">Copy</button></div>
+    </div>
+
+    <div class="item">
+      <h2>🟠 Nagad</h2>
+      <div class="muted">Personal account — Send Money</div>
+      <div class="row"><span class="value">01521499997</span><button class="btn" onclick="copyText('01521499997')">Copy</button></div>
+    </div>
+
+    <p class="note">Payment করার আগে account/number মিলিয়ে নিন। PIN, OTP, CVV বা card PIN কারও সাথে শেয়ার করবেন না।</p>
+  </div>
+</div>
+<script>
+function copyText(text){
+ navigator.clipboard.writeText(text).then(()=>alert("Copied: "+text)).catch(()=>alert(text));
+}
+</script>
+</body>
+</html>
